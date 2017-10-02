@@ -9,10 +9,11 @@
  import * as logInControl from './comp/loginControl.js';
  import * as temp from './comp/temperature.js';
  import * as HOC from './comp/HOCTest.js';
+ import * as PT from './comp/productTable.js';
 
 (function(){
 	ReactDOM.render(
-	 <div><clk.Clock/><logInControl.LogInControl/><br/><temp.TemperatureConverter/><br/><HOC.SumFinal/><br/><HOC.SubFinal ad="qwe"/></div>,
+	 <div><clk.Clock/><logInControl.LogInControl/><br/><temp.TemperatureConverter/><br/><HOC.SumFinal/><br/><HOC.SubFinal ad="qwe"/><br/><PT.FilterableProductTable/></div>,
 	  document.getElementById('root')
 	);
 })();
