@@ -44,4 +44,3 @@ export class LogInControl extends React.Component{
 		<Greeting state={isLoggedIn}/></div>:<div><LogInButton onClick={this.onLogInClick}/><Greeting state={isLoggedIn}/></div>;
 	}
 } 
-

@@ -75,3 +75,6 @@ export class FilterableProductTable extends React.Component{
 		return <div><SearchBar value= {this.state.keyword} onChange={this.onTypeHandle}/><ProductTable products={filteredProducts}/></div>
 	}
 }
+
+console.log('redux2');
+

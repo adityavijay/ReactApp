@@ -1,4 +1,5 @@
 ﻿import React from 'react';
+import * as RX from './redux.js';
 
 export class Clock extends React.Component{
 	constructor(props){

@@ -23,8 +23,7 @@ function tryConvert(temp, convertFunc){
 function Celcius(props){
 	/*function handChange(e,x){
 		props.onChange(e.target.value);
-	}*/
-	
+	}*/	
 	
 	var temp = props.temp, x={a:12,b:23},
 	handChange = (function(e){
