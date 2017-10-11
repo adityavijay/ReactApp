@@ -1,7 +1,7 @@
 ﻿import React from 'react';
 import * as RX from './redux.js';
 
-export class Clock extends React.Component{
+class Clock extends React.Component{
 	constructor(props){
 		super(props);
 		this.state={date:new Date()};
@@ -31,3 +31,21 @@ export class Clock extends React.Component{
 		)
 	}
 }
+
+var test = ()=>(console.log('test'));
+
+export default {Clock,test};
+
+//export default test;
+
+//import * as xx from 'xx'  (when there is no default)
+// import {Clock, test} from 'xx' (exact name of variable from module like clock and test)
+// import anyName from 'xx' (when you set default)
+// import React from 'react' uses export default{Component}, that's why you can fetch Component through React.Component
+// you can also do    import React, {Component} from 'react';
+
+//you can not add default to var,const or let declaration directly, you need to add them later export default x;.
+
+//Usually default value can be accessed by any identifier in import but to create React Element the identifier should be //excaly same as react component name
+
+
