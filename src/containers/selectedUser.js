@@ -4,14 +4,19 @@ import {connect} from 'react-redux';
 
 class SelectedUser extends Component{
 	render(){
-		var selectedUser = this.props.selectedUser != null? this.props.selectedUser.selectedUser.Firstname: "None Selected";
+		if(this.props.currentUser != null && this.props.currentUser != undefined ){
+			var selectedUser =  this.props.currentUser.selectedUser;
+		}else
+		{
+			var selectedUser = "None Selected";
+		}
 		return <div>{selectedUser}</div>
 	}
 }
 
 
 var mapStateToProps=(state)=>{
-	return {selectedUser: state.currentUser};
+	return {currentUser: state.currentUser};
 }
 
 

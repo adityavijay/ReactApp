@@ -27,7 +27,9 @@ function mapStateToProps( state ){
 
 
 var mapDispatchToProps=(dispatch)=>{
-	return {onSelectClick:(user)=>(dispatch(setActive(user)))};
+	return {onSelectClick:(user)=>{
+		dispatch(setActive(user))
+	}};
 };
 
 //export var x =connect(mapStateToProps)(UserList);
