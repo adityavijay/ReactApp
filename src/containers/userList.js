@@ -21,12 +21,12 @@ class UserList extends Component{
 }
 
 
-function mapStateToProps( state ){
+function mapStateToProps( state, props ){
 	return {users:state.users};
 }
 
 
-var mapDispatchToProps=(dispatch)=>{
+var mapDispatchToProps=(dispatch, props)=>{
 	return {onSelectClick:(user)=>{
 		dispatch(setActive(user))
 	}};
