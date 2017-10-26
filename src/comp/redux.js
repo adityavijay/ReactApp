@@ -35,8 +35,8 @@ var ReactApp=(props)=>{
 			<br/>
 			<div>Selected User</div>
 			<SelectedUser/>
-			<NavRoute/>
-			
+			<p><b>Routing Navigation</b></p>	
+			<NavRoute/>			
 		</div>	
 	</Provider>			
 };
