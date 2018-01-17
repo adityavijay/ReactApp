@@ -53,17 +53,17 @@ module.exports={
 	         use: [
 	           'json-loader'
 	         ]
-	       },
+	        },
 			{
-				 test: /\.js$/,
-				 include: [
+				test: /\.js$/,
+				include: [
 					path.resolve(__dirname, "src")
 				  ],
-				 loader: 'babel-loader?cacheDirectory',
-				 query: {
-					 presets: ['es2015','react']
-				 }
-			 }
+				loader: 'babel-loader?cacheDirectory',
+				query: {
+					presets: ['es2015','react']
+				}
+			}
 		]
 	}
 }

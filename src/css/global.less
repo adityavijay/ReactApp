@@ -1,0 +1,59 @@
+/*Purpose: having classes to add triangle shape
+  Writer: Aditya Vijay
+*/
+
+/*Mixin for arrow pointed top*/
+.arrow(@direction) when(@direction = up)
+{
+    border: 9px solid transparent;
+    border-top: 0;
+    border-bottom: 12px solid;
+    border-bottom-color: inherit;
+    width: 0;
+    position: absolute;
+} 
+
+/*Mixin for arrow pointed bottom*/
+.arrow(@direction) when(@direction = down)
+{
+    border: 9px solid transparent;
+    border-bottom: 0;
+    border-top: 12px solid;
+    border-top-color: inherit;
+    width: 0;
+    position: absolute;
+}
+
+@arrow-leftRight-position: 0.8em;
+
+/*classes for arrow pointer*/
+.arrow--up{
+    .arrow(up);
+}
+
+.arrow--down{
+    .arrow(down);
+}
+
+/*classes for arrow positioning*/
+.topLeft{
+    bottom: 100%;
+    left: @arrow-leftRight-position;
+}
+
+.topRight{
+    bottom: 100%;
+    right: @arrow-leftRight-position;
+}
+
+.bottomLeft{
+    top: 100%;
+    left: @arrow-leftRight-position;
+}
+
+.bottomRight{
+    top: 100%;
+    right: @arrow-leftRight-position;
+}
+
+

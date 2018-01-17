@@ -1,10 +1,12 @@
 ﻿import React from 'react';
 import * as RX from './redux.js';
+import PropTypes1 from 'prop-types';
 
-class Clock extends React.Component{
+export class Clock extends React.Component{
 	constructor(props){
 		super(props);
 		this.state={date:new Date()};
+		this.tick = this.tick.bind(this);
 	}	
 	
 	
@@ -12,8 +14,26 @@ class Clock extends React.Component{
 		this.id = setInterval(()=>this.tick(),1000);
 	}
 	componentWillUnmount(){
-		clearInterval(this.id);
+		clearInterval(this.id);4
 	}
+	/*
+	componentWillReceiveProps(nextProps){
+		console.log(1);
+	}
+	
+	shouldComponentUpdate(nextProps, NextSt){
+		console.log(2);
+		return true;
+	}
+	
+	
+	componentWillUpdate(nextProps, NextSt){
+		console.log(3);
+	}
+	
+	componentDidUpdate(prevProps, prevSt){
+		console.log(4);
+	}*/
 	
 	tick(){
 		this.setState({date:new Date()});
@@ -27,14 +47,17 @@ class Clock extends React.Component{
 		return(
 			<div>
 				<h2>Time is {this.state.date.toLocaleTimeString()}</h2>
+					{this.props.name1}
 			</div>
 		)
 	}
 }
 
-var test = ()=>(console.log('test'));
+Clock.propTypes={name1: PropTypes1.string};	
 
-export default {Clock,test};
+export var test = ()=>(console.log('test'));
+
+//export default {Clock,test};
 
 //export default test;
 
@@ -47,5 +70,3 @@ export default {Clock,test};
 //you can not add default to var,const or let declaration directly, you need to add them later export default x;.
 
 //Usually default value can be accessed by any identifier in import but to create React Element the identifier should be //excaly same as react component name
-
-

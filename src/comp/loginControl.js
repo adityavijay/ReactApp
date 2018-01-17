@@ -28,6 +28,23 @@ export class LogInControl extends React.Component{
 		this.onLogOutClick = this.onLogOutClick.bind(this);
 	}
 	
+	componentWillReceiveProps(nextSt){
+		console.log(1);
+	}
+	
+	shouldComponentUpdate(nextProps, NextSt){
+		console.log(2);
+		return true;
+	}
+	
+	componentWillUpdate(nextProps, NextSt){
+		console.log(3);
+	}
+	
+	componentDidUpdate(nextProps, NextSt){
+		console.log(4);
+	}
+	
 	onLogInClick(){
 		this.setState({isLoggedIn:true});
 	}
