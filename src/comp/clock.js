@@ -39,6 +39,7 @@ export class Clock extends React.Component{
 		this.setState({date:new Date()});
 	}
 	
+	
 	tostring(){
 		console.log(12);
 	}
@@ -47,7 +48,6 @@ export class Clock extends React.Component{
 		return(
 			<div>
 				<h2>Time is {this.state.date.toLocaleTimeString()}</h2>
-					{this.props.name1}
 			</div>
 		)
 	}

@@ -36,3 +36,4 @@ var mapDispatchToProps=(dispatch, props)=>{
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserList);
 
+'^(' + 'housing' + '|' + 'housing' + ' ' + '|' +' '+'housing' + ')$'

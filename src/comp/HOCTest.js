@@ -17,7 +17,7 @@ function HOC(WrappedComponent, selectData){
 			this.state = {data:selectData(this.input1.value,this.input2.value)};
 			
 		}
-		
+						
 		handleChange(e){
 			this.setState({data:selectData(this.input1.value,this.input2.value)});
 		}
